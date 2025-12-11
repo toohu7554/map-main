@@ -17,17 +17,17 @@
 		<script src="https://unpkg.com/georaster-layer-for-leaflet"></script>
 		<script src="example1.js" type="module"></script>
 		<!-- plugin -->
-			<link rel="stylesheet" href="https://github.com/toohu7554/geolocation/blob/main/folder/css3/leaflet-search.min.css">
+			<link rel="stylesheet" href="https://github.com/toohu7554/map-main/css3/leaflet-search.min.css">
 			<script src="https://unpkg.com/georaster-layer-for-leaflet/dist/georaster-layer-for-leaflet.min.js"></script>
 			<script src="js/L.Control.Locate.min.js"></script> /*位置表示用*/
 		<script src="https://github.com/toohu7554/map-main/js/L.Control.Locate.min.js.map"></script>  /*位置表示用*(目的不明)/
 		<!-- leaflet プラグインCSS-->
 			<link rel="stylesheet" href="https://unpkg.com/leaflet-switch-basemap@1.0.6/src/L.switchBasemap.css" crossorigin=""/>
 			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
-			<link rel="stylesheet" href="https://github.com/toohu7554/geolocation/blob/main/folder/css3/L.Control.Locate.min.css" /> /*位置表示用*/
-			<link rel="stylesheet" href="https://github.com/toohu7554/geolocation/blob/main/folder/css3/L.Control.Locate.min.css.map"/>/*位置表示用（目的不明）*/
+			<link rel="stylesheet" href="https://github.com/toohu7554/map-main/css3/L.Control.Locate.min.css" /> /*位置表示用*/
+			<link rel="stylesheet" href="https://github.com/toohu7554/map-main/css3/L.Control.Locate.min.css.map"/>/*位置表示用（目的不明）*/
 		 <!-- Plugin Icon.Pulse -->
-	    	<link rel="stylesheet" href="https://github.com/toohu7554/geolocation/blob/main/folder/css3/L.Icon.Pulse.min.css" >
+	    	<link rel="stylesheet" href="https://github.com/toohu7554/map-main/css3/L.Icon.Pulse.min.css" >
 	    	<script src="https://github.com/toohu7554/map-main/js/L.Icon.Pulse.min.js" ></script>
 			
     
@@ -385,123 +385,7 @@
 															
 							//ダウンロード時に初期化する
 								window.addEventListener('renderer', L.canvas());
-						}
-			
-						
-						
-
-	/*
-				(async function(){				
-					//mport * as je from "jaxa.earth.esm.js";
-					const collection ="https://s3.ap-northeast-1.wasabisys.com/je-pds/cog/v1/NASA.EOSDIS_Terra.MODIS_MOD11C1-LST.daytime.v061_global_half-monthly/collection.json";				
-					const bbox = [122,20,148,46];        			
-					const band = "LST";
-					const date = "2023-03-01";
-					const colorMap = {
-							min: 273.15 - 5,
-							max: 273.15 + 35,
-							colors: "jet",
-						};
-				}) */
-					
-			/*
-				{
-					const canvas = document.getElementById('canvas');
-					const ctx = canvas.getContext('2d');	
-					const imagePath = ('https://www.mhlw.go.jp/content/11600000/001447552.png');				
-					const image = je.getImage({
-						// MODISの地表面温度のデータ
-						//collection: collection,
-						  collection,
-						 colorMap,										
-						//bbox: bbox,
-						//width: 600,
-						//height: 600,
-						//onloading: null,
-					});				
-					
-					//image.getCanvas("mapcontainer");
-			//可視化した画像をcanvas要素として追加
-			//document.main.appendChild(image.getCanvas());
-			//カラーマップ凡例をcanvas要素として追加(幅500px、高さ30px、文字サイズ10px)
-			//document.main.appendChild(image.getLegend(500, 30, 10));
-			 //const div = document.getElementById("map");
-							image.src = imagePath;				
-					canvas.width = Number(window.innerWidth);
-					canvas.height = Number(canvas.width/2);
-					image.onload = function(){
-							ctx.drawImage(image,0,0,image.width,image.height,0,0,canvas.width,canvas.height);
-					}
-				document.body.appendChild(image.getCanvas());	
-					//データの単位を取得
-				console.log(image);
-				};
-	*/		
-					
-				//})();
-				/*
-					// initalize leaflet map
-				{
-				var map = L.map('map').setView([0, 0], 5);
-				var url_to_geotiff_file = "example_4326.tif";					
-				fetch(url_to_geotiff_file)
-				.then(response => response.arrayBuffer())
-				.then(arrayBuffer => {
-					parse_georaster(arrayBuffer).then(georaster => {
-					console.log("georaster:", georaster);
-					var layer = new GeoRasterLayer({
-					georaster: georaster,
-					opacity: 0.7,
-					pixelValuesToColorFn: values => values[0] > 100 ? '#ff0000' : '#0000ff',
-					resolution: 64 // optional parameter for adjusting display resolution
-					});
-					layer.addTo(map);							
-					map.fitBounds(layer.getBounds());
-					});
-				});	
-				var canvas = document.getElementById('mapid');
-				var c = canvas.getContext("2d"); 
-				//const image = document.getElementById("/js/station/om5ru80000003j6y-img/q2k4vk000001680b.png");
-				}*/
-
-						//import { coastline } from "/folder/coastline.js";
-								/*  動作テスト完了のためコメントアウト	{
-										//import * as je from "../jaxa.earth.esm.js";
-										
-										
-										const map = L.map("map", {
-												crs: L.CRS.EPSG4326,
-												center: [0, 0],
-												zoom: 1,
-												minZoom: 1,
-												maxZoom: 15,
-												// maxBounds: [[-90, -360],[90, 360]], //south west north east
-											
-												// zoomControl: false,
-												attributionControl: false,
-										});
-										
-										const geojsonlayer = L.geoJSON('coastline', {
-												style:{
-														"color": "jet",
-														"weight": 1,
-														"opacity": 0.5
-												}
-										}).addTo(map);
-										
-										je.leaflet.createLayer({									
-												L,								
-												collection: "https://s3.ap-northeast-1.wasabisys.com/je-pds/cog/v1/JAXA.EORC_ALOS.PRISM_AW3D30.v3.2_global/collection.json",
-												band: "DSM",																	
-												colorMap: {
-														min: 0,
-														max: 6000,
-														colors: "jet",
-												},								
-										}).addTo(map);
-									}
-								*/
-
+						}														
 				//--------------------------------------------------------------------------------------------------------------------									
 			
 		</script>
