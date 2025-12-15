@@ -346,7 +346,7 @@
 									"openst": gsiaa,
 								};		
 								var earthMaps    = {
-									"openst": gsiaa,
+									//"openst": gsiaa,
 									"衛星画像:DSM": gsibb,
 									"harotore"   : harotirekun,
 									"test2;FNF"   : nas,
@@ -378,7 +378,7 @@
 									       		lc.start();
 								}
 															 																		
-								L.control.layers(overlayMaps,earthMaps,baseMaps).addTo(map); //2つの引数までしか読み込めない？
+								L.control.layers(earthMaps,baseMaps).addTo(map); //2つの引数までしか読み込めない？
 								gsi.addTo(map);
 							} /*===================================================================================*/
 									)();
