@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<style>	     
-=======
 
->>>>>>> 6bb8db5 (aa)
 			*{
 				margin:0;
 				padding:0;
@@ -25,9 +21,14 @@
 				margin: 10px;
 				padding: 5px;
 			}
-<<<<<<< HEAD
-			#mapcontainer {border: solid 5px oreage;};
-		</style>						   							  			
-=======
-			#mapcontainer {border: solid 5px oreage;};
->>>>>>> 6bb8db5 (aa)
+
+            @media screen and(max-width: 480px) {
+                img {
+                border: 0;
+                }
+                }
+            @media screen and(min-width: 1280px) {
+                img {
+                border: 1px solid red;
+                }
+            }
