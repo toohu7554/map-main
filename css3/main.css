@@ -31,4 +31,8 @@
                 img {
                 border: 1px solid red;
                 }
+			.h-img{
+				max-height: 400px;
+				min-width: 1200px;
+				}
             }
