@@ -285,13 +285,9 @@
 								
 								map.on('overlayadd' || 'overlayremove', function() {
     								alert('初期化します。');
-									L.control.resetView({
-									//position: "topleft",
-									//title: "Reset view",
-									latlng: L.latLng([37.9473, 139.32825]),
-									zoom: 15,
+									L.control.resetView({ latlng: L.latLng([37.9473, 139.32825]),zoom: 15,
 									}).addTo(map);	
-									remove();
+									//remove();
   								});
 
 								//地図の中心とズームレベルを指定                 
