@@ -341,12 +341,7 @@
 													});
 						
 													//最小値 //最大値 max: 6000, //最小値～最大値をjet（青～緑～黄～赤の虹色）で塗りつぶします。
-								/*L.control.resetView({
-                				//position: "topleft",
-                				//title: "Reset view",
-                				latlng: L.latLng([37.9473, 139.32825]),
-                				zoom: 15,
-            					}).addTo(map);	*/
+								
 
 								var baseMaps = {
 									"地理院地図": gsi,
@@ -394,7 +389,8 @@
 									       		lc.start();
 								}
 															 																		
-								L.control.layers(baseMaps,earthMaps).addTo(map); //2つの引数までしか読み込めない？
+								L.control.layers(baseMps,earthMaps).addTo(map); //2つの引数までしか読み込めない？
+								L.control.resetView({position: "topleft",title: "Reset view",latlng: L.latLng([37.9473, 139.32825]),zoom: 15,}).addTo(map);	
 								gsi.addTo(map);
 							} /*===================================================================================*/
 									)();
