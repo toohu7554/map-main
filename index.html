@@ -131,7 +131,8 @@
 
 		<p>kokoko</p>
 		<button type="button" onclick="ShowAlert()">ここをクリック</button>
-		<button type="image" onclick="onSignInButtonClick()">ここをクリック</button>						 
+		<button type="image" onclick="onSignInButtonClick()">ここをクリック</button>
+		<input type="range"></input>						 
 	
 		<div> <!--div_mapcontainer始まり ----------------------------------------------------------->
 			 <div id="mapcontainer" style="width:600px;height:600px"></div>
@@ -404,7 +405,7 @@
 								}
 															 																		
 								L.control.layers(baseMaps,earthMaps).addTo(map); //2つの引数までしか読み込めない？
-								L.control.scale({position: "topleft",title: "Reset view",latlng: L.latLng([37.9473, 139.32825]),zoom: 15,}).addTo(map);	
+								L.control.scale({position: "topleft",title: "Reset view",latlng: L.latLng([37.9473, 139.32825]),zoom: 15,}).addTo(map);					
 								gsi.addTo(map);
 							} /*===================================================================================*/
 									)();
