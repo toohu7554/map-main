@@ -319,7 +319,7 @@
 															L,								
 															collection: "https://s3.ap-northeast-1.wasabisys.com/je-pds/cog/v1/JAXA.EORC_ALOS.PRISM_AW3D30.v3.2_global/collection.json",
 															band: "DSM",
-															date: new Date(Date.UTC(2021,6-1)),
+															date: new Date(Date.UTC(2022,6-1,20)),
 															colorMap: {
 																	min: 0,
 																	max: 6000,
@@ -404,7 +404,7 @@
 								}
 															 																		
 								L.control.layers(baseMaps,earthMaps).addTo(map); //2つの引数までしか読み込めない？
-								L.control.ResetView({position: "topleft",title: "Reset view",latlng: L.latLng([37.9473, 139.32825]),zoom: 15,}).addTo(map);	
+								L.control.scale({position: "topleft",title: "Reset view",latlng: L.latLng([37.9473, 139.32825]),zoom: 15,}).addTo(map);	
 								gsi.addTo(map);
 							} /*===================================================================================*/
 									)();
