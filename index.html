@@ -22,12 +22,11 @@
 			<link rel="stylesheet" href="https://github.com/toohu7554map-main/blob/main/css3/leaflet-search.min.css">
 			<script src="https://unpkg.com/georaster-layer-for-leaflet/dist/georaster-layer-for-leaflet.min.js"></script>
 			<script src="Js/L.Control.Locate.min.js"></script> <!--/*位置表示用*/-->
-			<script src="Js/L.Control.Locate.min.js.map"></script>  <!--/*位置表示用*(目的不明)/-->
+			<script src="pages/map/folder/js/L.Control.Locate.min.js.map"></script>  <!--/*位置表示用*(目的不明)/-->
 		<!-- leaflet プラグインCSS-->
 			<link rel="stylesheet" href="https://unpkg.com/leaflet-switch-basemap@1.0.6/src/L.switchBasemap.css" crossorigin=""/>
 			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
 			<link rel="stylesheet" href="css3/L.Control.Locate.min.css" /> <!--位置表示用*/-->
-			<link rel="stylesheet" href="Js/L.Control.Locate.min.js.map"/><!--/*位置表示用（目的不明）*/-->
 		 <!-- Plugin Icon.Pulse -->
 	    	<link rel="stylesheet" href="css3/L.Icon.Pulse.css" >
 	    	<script src="Js/L.Icon.Pulse.js" ></script>
@@ -137,7 +136,7 @@
 		<div> <!--div_mapcontainer始まり ----------------------------------------------------------->
 			 <div id="mapcontainer" style="width:600px;height:600px"></div>
 			 	<p>activemap直下</p>
-				<p><progress max="100" div id="mapcontainer()">"%"</progress></p>
+				<p><progress max="100" value="latestTemperature">"%"</progress></p>
 			 <br><div id="map" style="width:600px;height:600px">解説コーナでも設置予定</div>				 				
 			<!--<div id "map"></div>-->
 		</div>
@@ -296,6 +295,7 @@
 								//地図を表示するdiv要素のidを設定    
 								var map = L.map('mapcontainer',{ renderer: L.canvas() });
 								//->地図を作成 //->マップ内のすべてのパスにデフォルトでCanvasを使用
+								
 								
 								map.on('overlayadd' || 'overlayremove', function() {
     								alert('初期化します。');
