@@ -137,11 +137,12 @@
 		<div> <!--div_mapcontainer始まり ----------------------------------------------------------->
 			 <div id="mapcontainer" style="width:600px;height:600px"></div>
 			 	<p>activemap直下</p>
-				<p><progress max="100" value="30"> + % </progress></p>
-			 <br><div id="map" style="width:600px;height:600px">解説コーナでも設置予定</div>	
-			 
-				
+				<p><progress id="shinnchoku" aria-label="Content loading">"%"</progress></p>
+			 <br><div id="map" style="width:600px;height:600px">解説コーナでも設置予定</div>				 				
 			<!--<div id "map"></div>-->
+		</div>
+		<div aria-busy="true" aria-describedby="progress-bar">
+		  <!-- content is for this region is loading -->
 		</div>
 
 		<div class="menu-toggle" id="menuToggle">
